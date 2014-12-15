@@ -29,7 +29,9 @@ var App = React.createClass({
     return (
       <div className="AppContainer">
         <div className="StoryList">
-          <h1>{this.state.title}</h1>
+          <div className="StoryHeader">
+            <span>{this.state.title}</span>
+          </div>
           <StoryList items={this.state.storyItems} />
         </div>
        <Navigation

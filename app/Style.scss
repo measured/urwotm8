@@ -10,20 +10,16 @@
 
 html {
   overflow-y: scroll;
+  font-family: 'Union';
 }
 
 body {
-  background-color: pink;
+  background-image: url('assets/img/pattern.jpg');
+  background-size: 150px;
   color: black;
   width: 100%;
   display: flex;
   justify-content: center;
-}
-
-h1 {
-  font-weight: 300;
-  text-transform: uppercase;
-  font-size: 42px;
 }
 
 .AppContainer {
@@ -35,7 +31,7 @@ h1 {
 .StoryList {
   width: 100vw;
   height: 100%;
-  padding: 10px;
+  padding: 20px;
   border-left: 3px solid black;
   border-right: 3px solid black;
   border-bottom: 3px solid black;
@@ -45,24 +41,35 @@ h1 {
     display: flex;
     align-items: flex-start;
     border: 3px solid black;
+    box-shadow: none;
 
     & + .Media {
-      margin-top: 10px;
+      margin-top: 20px;
+    }
+
+    &:hover {
+      transition: 0.25s;
+      box-shadow: 4px 4px 0px black;
     }
   }
 
   .MediaFigure {
     margin-right: 1em;
-    background-color: red;
     border-right: 3px solid black;
+    border-bottom: 3px solid black;
 
     .Figure {
       font-size: 24px;
+      padding: 5px;
     }
   }
 
   .MediaBody {
     flex: 1;
+
+    a {
+      color: black;
+    }
   }
 }
 
@@ -83,20 +90,32 @@ h1 {
   li {
     background-color: white;
   }
-
 }
 
-
-
-.navigation .header {
-  padding: 15px;
+input {
+  width: 190px;
+  height: 40px;
+  border: 3px solid black;
+  padding-left: 10px;
 }
 
-.navigation li {
-  padding: 15px;
+.navigation {
+
+  ul {
+    border: 3px solid black;
+  }
+
+  li {
+    padding: 15px;
+
+    & + li {
+      border-top: 3px solid black;
+    }
+  }
 }
 
 .navigation .selected {
+  color: white;
   background-color: #2349FF;
 }
 
@@ -106,6 +125,10 @@ h1 {
 }
 
 .title {
+  font-family: serif;
+  font-weight: normal;
+  font-size: 16px;
+  padding-right: 5px;
 }
 
 .title a {
@@ -113,6 +136,9 @@ h1 {
 }
 
 .author {
+  font-family: 'Inconsolata', monospace;
+  font-weight: normal;
+  font-size: 12px;
 }
 
 /**
@@ -120,10 +146,32 @@ h1 {
  * <span> elements if they have non-text-node siblings.
  */
  .author b {
-  // color: #afb3b9;
+  font-weight: bold;
 }
 
 .delete {
   float: right;
   display: inline-block;
+}
+
+.StoryHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  span {
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 3px;
+  }
+}
+
+.filter {
+  &:after {
+    margin-left: 4px;
+    line-height: 1.6;
+    font-size: 10px;
+    content: '▼'
+  }
 }
