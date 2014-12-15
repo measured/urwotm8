@@ -1,0 +1,129 @@
+
+// Assets
+@import "css-boilerplate/_fonts";
+
+// Mixins
+@import "css-boilerplate/mixins/_breakpoints";
+
+// Reset
+@import "css-boilerplate/reset/_normalize";
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  background-color: pink;
+  color: black;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 42px;
+}
+
+.AppContainer {
+  max-width: 800px;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.StoryList {
+  width: 100vw;
+  height: 100%;
+  padding: 10px;
+  border-left: 3px solid black;
+  border-right: 3px solid black;
+  border-bottom: 3px solid black;
+  background-color: white;
+
+  .Media {
+    display: flex;
+    align-items: flex-start;
+    border: 3px solid black;
+
+    & + .Media {
+      margin-top: 10px;
+    }
+  }
+
+  .MediaFigure {
+    margin-right: 1em;
+    background-color: red;
+    border-right: 3px solid black;
+
+    .Figure {
+      font-size: 24px;
+    }
+  }
+
+  .MediaBody {
+    flex: 1;
+  }
+}
+
+.navigation {
+  min-width: 200px;
+  margin-top: 20px;
+  margin-left: 20px;
+
+  ul {
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    cursor: pointer;
+    list-style: none;
+    width: 100%;
+  }
+
+  li {
+    background-color: white;
+  }
+
+}
+
+
+
+.navigation .header {
+  padding: 15px;
+}
+
+.navigation li {
+  padding: 15px;
+}
+
+.navigation .selected {
+  background-color: #2349FF;
+}
+
+.score {
+  font-size: 36px;
+  margin: 15px;
+}
+
+.title {
+}
+
+.title a {
+  text-decoration: none;
+}
+
+.author {
+}
+
+/**
+ * Changed to a <b> because React wraps text nodes in
+ * <span> elements if they have non-text-node siblings.
+ */
+ .author b {
+  // color: #afb3b9;
+}
+
+.delete {
+  float: right;
+  display: inline-block;
+}

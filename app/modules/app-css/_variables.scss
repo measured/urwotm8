@@ -1,0 +1,23 @@
+// font family - update these when external fonts are setup
+$sans:   sans-serif;
+$serif:  serif;
+
+// font weights should be descriptive
+$light:     300;
+$roman:     400;
+$medium:    500;
+$semibold:  600;
+$bold:      700;
+
+// font sizes generally used on the html element and some mixins
+$base_font_size: 16px;
+$base_line_height: 1.5;
+
+// defined colours
+$shiny-blue: #41cbff;
+
+// abstract colours
+$foreground:          #000000;
+$background:          #FFFFFF;
+$focus_color:         $shiny-blue;
+$alert_color:         #fd9833;

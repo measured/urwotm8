@@ -1,0 +1,80 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+html {
+  width: 100%;
+
+  font-size: $base_font_size;
+  line-height: $base_line_height;
+
+  font-family: $sans;
+  font-weight: $roman;
+  font-style: normal;
+
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+
+  color: $foreground;
+  background-color: $background;
+
+  overflow-y: scroll;
+}
+
+body {
+  width: 100%;
+}
+
+img {
+  border:none;
+  font-style:italic;
+  max-width: 100%;
+}
+
+ul {
+  padding-left: 18px;
+}
+
+ol {
+  padding-left: 20px;
+}
+
+body,
+h1,h2,h3,h4,h5,h6,
+p,blockquote,pre,
+dl,dd,ol,ul,
+form,fieldset,legend,
+table,th,td,caption,
+figure,
+hr {
+  margin:0;
+  padding:0;
+  font-weight: $roman;
+  font-size: $base_font_size;
+}
+
+pre {
+  overflow: auto;
+}
+
+audio, video, summary {
+  &:focus {
+    box-shadow: none;
+    @include tabfocus();
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $focus_color;
+
+  &:hover {
+    color: darken($focus_color, 10%);
+  }
+}

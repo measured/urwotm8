@@ -1,0 +1,6 @@
+/node_modules
+/build
+.DS_Store
+/config/stats.json
+npm-debug.log
+s3.json

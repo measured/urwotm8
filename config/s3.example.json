@@ -1,0 +1,6 @@
+{
+  "key": "short string of numbers and letters",
+  "secret": "long string of numbers and letters",
+  "bucket": "my.bucket.com",
+  "region": "ap-southeast-2"
+}
