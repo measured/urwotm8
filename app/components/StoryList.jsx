@@ -3,17 +3,12 @@ var React = require("react");
 var StoryList = React.createClass({
   render: function() {
 
-    var rank = function(rank) {
-      for (var i = 0; i < rank.length; i+1) {
-      }
-    }
-
-    var storyNodes = this.props.items.map(function(item, rank) {
+    var storyNodes = this.props.items.map(function(item, index) {
       return (
         <div className="Media" key={item.data.id}>
           <div className="MediaFigure">
             <div className="Figure">
-              {rank + 1}
+              {index + 1}
             </div>
           </div>
           <div className="MediaBody">
