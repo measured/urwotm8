@@ -2,7 +2,6 @@ var React = require("react");
 
 var StoryList = React.createClass({
   render: function() {
-
     var storyNodes = this.props.items.map(function(item, index) {
       return (
         <div className="Media" key={item.data.id}>
@@ -26,11 +25,9 @@ var StoryList = React.createClass({
     });
 
     return (
-      <table>
-        <tbody>
-          {storyNodes}
-        </tbody>
-      </table>
+      <div>
+        {storyNodes}
+      </div>
     );
   }
 });
